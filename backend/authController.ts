@@ -21,6 +21,7 @@ const registerSchema = z.object({
 
 export const login = async (req: Request, res: Response) => {
   try {
+    console.log("Login Hit")
     // Validate request body against login schema
     const { username, password } = loginSchema.parse(req.body);
 
@@ -60,6 +61,7 @@ export const login = async (req: Request, res: Response) => {
 export const register = async (req: Request, res: Response) => {
   try {
     // Validate request body against register schema
+    console.log("Register Hit")
     const { firstName, username, email, password, mobileNumber, country } = registerSchema.parse(req.body);
 
     // Check if all fields are provided
