@@ -1,11 +1,13 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const config = require('./config');
+const authRoutes = require('./routes/authRoutes');
+const watchlistRoutes = require('./routes/watchlistRoutes');
+const errorHandler = require('./utils/errorHandler');
 
-import bodyParser from 'body-parser';
-import mongoose from 'mongoose';
-import config from './config';
-import authRoutes from './routes/authRoutes';
-import watchlistRoutes from './routes/watchlistRoutes';
-import { errorHandler } from './utils/errorHandler';
+// Your application code continues...
+
 const cors = require("cors");
 
 const app = express();
@@ -29,7 +31,7 @@ mongoose.connect('mongodb+srv://ramishjamal:ramish2002@cluster0.xl7rkhg.mongodb.
   useUnifiedTopology: true // Add this option
 })
 .then(() => {
-  app.listen(config.port, () => {
+  app.listen(config.port, (err) => {
     console.log(`Server is running on port ${config.port}`);
   });
 })
