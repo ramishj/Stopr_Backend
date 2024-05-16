@@ -3,8 +3,7 @@ import { z } from 'zod';
 import User from './models/User';
 import jwt from 'jsonwebtoken';
 import { JWT_SECRET } from './jwtAuth';
-import bcrypt from 'bcrypt';
-
+const bcrypt=require('bcryptjs');
 // Define Zod schemas for input validation
 const loginSchema = z.object({
   username: z.string(),
