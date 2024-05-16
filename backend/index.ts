@@ -1,4 +1,5 @@
-import express from 'express';
+const express = require('express');
+
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import config from './config';
