@@ -1,10 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const config = require('./config');
-const authRoutes = require('./routes/authRoutes');
-const watchlistRoutes = require('./routes/watchlistRoutes');
-const errorHandler = require('./utils/errorHandler');
+const config = require('./config.ts');
+const authRoutes = require('./routes/authRoutes.ts');
+const watchlistRoutes = require('./routes/watchlistRoutes.ts');
+const errorHandler = require('./utils/errorHandler.ts');
 
 // Your application code continues...
 
