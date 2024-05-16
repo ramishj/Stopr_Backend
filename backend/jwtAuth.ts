@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
-const JWT_SECRET = "hello"; // Replace with your actual secret key
+const JWT_SECRET = process.env.JWT_SECRET || 'hello'; // Replace with your actual secret key
 
 // Define a custom interface that extends the express Request interface
 interface CustomRequest extends Request {

@@ -20,8 +20,9 @@ app.use('/watchlist', watchlistRoutes);
 app.use(errorHandler as ErrorRequestHandler); // Type assertion
 
 mongoose.Promise = global.Promise;
+const mongoURL = process.env.MONGO_DB || 'mongodb://localhost:27017/mydatabase';
 
-mongoose.connect('mongodb+srv://ramishjamal:ramish2002@cluster0.xl7rkhg.mongodb.net/stopr', {
+mongoose.connect(mongoURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
