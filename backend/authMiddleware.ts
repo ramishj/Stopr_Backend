@@ -9,6 +9,7 @@ interface CustomRequest extends Request {
 
 export const authenticate = (req: CustomRequest, res: Response, next: NextFunction) => {
   try {
+    console.log('Authenticating user...');
     // Extract token from Authorization header
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
