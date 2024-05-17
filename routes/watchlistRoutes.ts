@@ -23,6 +23,7 @@ router.get('/searchSymbol', async (req: Request, res: Response) => {
     
     res.json({ results });
   } catch (error: any) {
+    
     res.status(500).json({ message: error.message });
   }
 });
